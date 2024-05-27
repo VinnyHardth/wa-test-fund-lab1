@@ -54,6 +54,9 @@ function verifyStockAvailability(productType, qty) {
  */
 function calculateTotalPrice(products) {
   let total = 0;
+  
+  if (!products) return total; // Added guard clause
+
   for (let i = 0; i < products.length; i++) {
     total += products[i].price * products[i].quantity; // Corrected calculation
   }

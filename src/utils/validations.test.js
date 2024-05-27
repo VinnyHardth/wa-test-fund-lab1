@@ -51,4 +51,9 @@ describe('calculateTotalPrice', () => {
   it('returns 0 if the products array is empty', () => {
     expect(calculateTotalPrice([])).toBe(0);
   });
+
+  it('returns 0 if the products array is not provided', () => {
+    expect(calculateTotalPrice()).toBe(0);
+  });
+
 });
