@@ -29,9 +29,10 @@ function verifyStockAvailability(productType, qty) {
   };
 
   const availableStock = stock[productType];
-  if (availableStock === 0) return false;
-  else return true;
+  if (availableStock >= qty) return true;
+  else return false;
 }
+
 
 /**
  * Calculates the total price of an array of products in an e-commerce application.
