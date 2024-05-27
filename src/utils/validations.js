@@ -5,6 +5,8 @@
  * @returns {string} - The first name extracted from the full name, or the name itself if no blank space is found.
  */
 function firstName(fullName) {
+  fullName = fullName.replace(/\s+/g, ' ');
+
   const blankSpace = fullName.lastIndexOf(' ');
 
   if (blankSpace === -1) return fullName;
@@ -27,6 +29,8 @@ function verifyStockAvailability(productType, qty) {
     tablet: 15,
     book: 0,
   };
+
+  if (qty <= 0) return false; 
 
   const availableStock = stock[productType];
   if (availableStock >= qty) return true;

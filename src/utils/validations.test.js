@@ -5,6 +5,10 @@ describe('firstName', () => {
     expect(firstName('John Doe')).toBe('John');
   });
 
+  it('returns the first name when multiple spaces separate the names', () => {
+    expect(firstName('John  Doe')).toBe('John');
+  });
+
   it('returns the full name when only one name is provided', () => {
     expect(firstName('John')).toBe('John');
   });
@@ -28,6 +32,9 @@ describe('verifyStockAvailability', () => {
     expect(verifyStockAvailability('book', 1)).toBe(false);
   });
 
+  it('returns false if a negative quantity is provided', () => {
+    expect(verifyStockAvailability('laptop', -1)).toBe(false);
+  });
 });
 
 
