@@ -6,7 +6,7 @@ describe('firstName', () => {
   });
 
   it('returns the first name when multiple spaces separate the names', () => {
-    expect(firstName('John  Doe')).toBe('John');
+    expect(firstName('  John  Doe')).toBe('John');
   });
 
   it('returns the full name when only one name is provided', () => {
