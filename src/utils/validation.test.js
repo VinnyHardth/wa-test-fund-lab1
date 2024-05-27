@@ -20,9 +20,14 @@ describe('verifyStockAvailability', () => {
     expect(verifyStockAvailability('laptop', 1)).toBe(true);
   });
 
+  it('returns false if the product type exceeds the available stock', () => {
+    expect(verifyStockAvailability('smartphone', 21)).toBe(false);
+  });
+
   it('returns false if the product type is not available in stock', () => {
     expect(verifyStockAvailability('book', 1)).toBe(false);
   });
+
 });
 
 
